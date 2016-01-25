@@ -1,13 +1,13 @@
 var babyName_debug=false;
 
-function babyName_specialCount(babyName_str, babyName_char){
+var babyName_specialCount=function(babyName_str, babyName_char){
 	var babyName_count=0;
 	for(var i=0; i<babyName_str.length; i++){
 		if(babyName_str.charAt(i)==babyName_char) babyName_count++;
 	}
 	if (babyName_debug) document.getElementById("babyNameDebug").innerHTML=document.getElementById("babyNameDebug").innerHTML+' '+babyName_count;
 	return babyName_count;
-}
+};
 
 var babyName_process=function (){
 	var babyName_list=document.getElementById("babyNameInput").value;
