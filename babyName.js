@@ -9,7 +9,7 @@ function babyName_specialCount(babyName_str, babyName_char){
 	return babyName_count;
 }
 
-var babyName_process=function{
+function babyName_process(){
 	var babyName_list=document.getElementById("babyNameInput").value;
 	if(babyName_list!=null&&babyName_list.length>0){
 		var babyName_comma=babyName_specialCount(babyName_list,",");
