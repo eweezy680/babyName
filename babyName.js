@@ -20,6 +20,7 @@ var babyName_process=function (){
 		}else{
 			babyName_arr=babyName_list.split("\n");
 		}	
-		document.getElementById("babyNameResult").innerHTML='Name your baby: '+babyName_arr[Math.floor(Math.random()*babyName_arr.length)];
+		var babyName_r='Name your baby: '+babyName_arr[Math.floor(Math.random()*babyName_arr.length)];
+		document.getElementById("babyNameResult").innerHTML=babyName_r;
 	}
 };
