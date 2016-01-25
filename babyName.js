@@ -9,7 +9,7 @@ function babyName_specialCount(babyName_str, babyName_char){
 	return babyName_count;
 }
 
-function babyName_process(){
+var babyName_process=function{
 	var babyName_list=document.getElementById("babyNameInput").value;
 	if(babyName_list!=null&&babyName_list.length>0){
 		var babyName_comma=babyName_specialCount(babyName_list,",");
@@ -22,4 +22,4 @@ function babyName_process(){
 		}	
 		document.getElementById("babyNameResult").innerHTML='Name your baby: '+babyName_arr[Math.floor(Math.random()*babyName_arr.length)];
 	}
-}
+};
