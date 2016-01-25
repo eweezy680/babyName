@@ -7,7 +7,7 @@ var babyNameSpecialCount=function(babyNameStr, babyNameChar){
 	if (babyNameDebug) document.getElementById("babyNameDebug").innerHTML=document.getElementById("babyNameDebug").innerHTML+' '+babyNameCount;
 	return babyNameCount;
 };
-function babyNameProcess (){
+var babyNameProcess=function(){
 	var babyNameList=document.getElementById("babyNameInput").value;
 	if(babyNameList!=null&&babyNameList.length>0){
 		var babyNameComma=babyNameSpecialCount(babyNameList,",");
@@ -18,7 +18,7 @@ function babyNameProcess (){
 		}else{
 			babyNameArr=babyNameList.split("\n");
 		}	
-		var babyNameR='Name your baby: '+(babyNameArr[Math.floor(Math.random()*babyNameArr.length)]).trim();
-		document.getElementById("babyNameResult").innerHTML=babyNameR;
+		var babyNameRes='Name your baby: '+(babyNameArr[Math.floor(Math.random()*babyNameArr.length)]).trim();
+		document.getElementById("babyNameResult").innerHTML=babyNameRes;
 	}
-}
+};
