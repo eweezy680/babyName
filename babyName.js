@@ -1,24 +1,24 @@
-var babyName_debug=false;
-var babyName_specialCount=function(babyName_str, babyName_char){
-	var babyName_count=0;
-	for(var i=0; i<babyName_str.length; i++){
-		if(babyName_str.charAt(i)==babyName_char) babyName_count++;
+var babyNameDebug=false;
+var babyNameSpecialCount=function(babyNameStr, babyNameChar){
+	var babyNameCount=0;
+	for(var i=0; i<babyNameStr.length; i++){
+		if(babyNameStr.charAt(i)==babyNameChar) babyNameCount++;
 	}
-	if (babyName_debug) document.getElementById("babyNameDebug").innerHTML=document.getElementById("babyNameDebug").innerHTML+' '+babyName_count;
-	return babyName_count;
+	if (babyNameDebug) document.getElementById("babyNameDebug").innerHTML=document.getElementById("babyNameDebug").innerHTML+' '+babyNameCount;
+	return babyNameCount;
 };
 var babyNameProcess=function (){
-	var babyName_list=document.getElementById("babyNameInput").value;
-	if(babyName_list!=null&&babyName_list.length>0){
-		var babyName_comma=babyName_specialCount(babyName_list,",");
-		var babyName_newLine=babyName_specialCount(babyName_list,"\n");
-		var babyName_arr=[];
-		if(babyName_comma>babyName_newLine){
-			babyName_arr=babyName_list.split(",");
+	var babyNameList=document.getElementById("babyNameInput").value;
+	if(babyNameList!=null&&babyNameList.length>0){
+		var babyNameComma=babyNameSpecialCount(babyNameList,",");
+		var babyNameNewLine=babyNameSpecialCount(babyNameList,"\n");
+		var babyNameArr=[];
+		if(babyNameComma>babyNameNewLine){
+			babyNameArr=babyNameList.split(",");
 		}else{
-			babyName_arr=babyName_list.split("\n");
+			babyNameArr=babyNameList.split("\n");
 		}	
-		var babyName_r='Name your baby: '+babyName_arr[Math.floor(Math.random()*babyName_arr.length)];
-		document.getElementById("babyNameResult").innerHTML=babyName_r;
+		var babyNameR='Name your baby: '+(babyNameArr[Math.floor(Math.random()*babyNameArr.length)]).trim();
+		document.getElementById("babyNameResult").innerHTML=babyNameR;
 	}
 };
