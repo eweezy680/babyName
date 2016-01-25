@@ -5,7 +5,7 @@ function babyName_specialCount(babyName_str, babyName_char){
 	for(var i=0; i<babyName_str.length; i++){
 		if(babyName_str.charAt(i)==babyName_char) babyName_count++;
 	}
-	if (babyName_debug) document.getElementById("babyNameDebug").innerHTML=document.getElementById("babyNameDebug").innerHTML+" "+babyName_count;
+	if (babyName_debug) document.getElementById("babyNameDebug").innerHTML=document.getElementById("babyNameDebug").innerHTML+' '+babyName_count;
 	return babyName_count;
 }
 
@@ -20,6 +20,6 @@ function babyName_process(){
 		}else{
 			babyName_arr=babyName_list.split("\n");
 		}	
-		document.getElementById("babyNameResult").innerHTML="Name your baby: "+babyName_arr[Math.floor(Math.random()*babyName_arr.length)];
+		document.getElementById("babyNameResult").innerHTML='Name your baby: '+babyName_arr[Math.floor(Math.random()*babyName_arr.length)];
 	}
 }
